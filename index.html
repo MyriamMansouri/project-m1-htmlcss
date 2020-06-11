@@ -10,10 +10,11 @@
   </head>
 
   <body>
-    <header>
-      <img src="imgs/logo.svg" alt="Logo"/>
-      <nav>
-        <ul>
+    <header class="header flex-row">
+      <img class="logo" src="imgs/logo.svg" alt="Logo"/>
+      <nav >
+        <img src="imgs/menu.svg" alt="menu" class="menu-img"/>
+        <ul class="menu-list flex-row">
           <li>
             <a href="#features">Features</a>
           </li>
@@ -31,20 +32,20 @@
       </nav>
     </header>
     <main>
-      <section class="hero">
+      <section class="hero flex-column">
         <h1>Introducing Falcon 9</h1>
         <h2>We make dreams come true</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
       </section>
-      <section id="features">
+      <section id="features" class="flex-row section">
         <div class="features-detail">
           <img src="imgs/icon1.svg">
           <h3>Amazing Feature 1</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
           <button>Get it</button>
         </div>
-        <div class="features-detail">
+        <div class="features-detail ">
           <img src="imgs/icon2.svg">
           <h3>Amazing Feature 2</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
@@ -57,8 +58,8 @@
           <button>Sell it</button>
         </div>
       </section>
-      <section id="advantages">
-        <div class="advantages-detail">
+      <section id="advantages" class="section">
+        <div class="advantages-detail ">
           <h2>Some cool text</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>  
         </div>
@@ -66,32 +67,32 @@
           <h2>This looks cool</h2>
           <p>Hover me if you like random animation</p>  
         </div>
-        <div class="advantages-detail">
+        <div class="advantages-detail text">
           <h2>Slick gradient</h2>
           <p>Lorem ipsum?</p>  
         </div>
       </section>
-      <section id="gallery">
-        <div class="gallery-tile">
+      <section id="gallery" class="flex-row">
+        <div class="gallery-tile gallery-tile1">
           <h3>Our flagship car: The Model S</h3>  
         </div>
-        <div class="gallery-tile">
+        <div class="gallery-tile gallery-tile2">
           <h3>Cool cat</h3>  
         </div>
-        <div class="gallery-tile">
+        <div class="gallery-tile gallery-tile3">
           <h3>Introducing the Hyperloop</h3>
         </div>
-        <div class="gallery-tile">
+        <div class="gallery-tile gallery-tile4">
           <h3>So sneaky</h3>
         </div>
-        <div class="gallery-tile">
+        <div class="gallery-tile gallery-tile5">
           <h3>BFR - Bif Falcon Rocket</h3>
         </div>
-        <div class="gallery-tile">
+        <div class="gallery-tile gallery-tile6">
           <h3>So much fun</h3>
         </div>
       </section>
-      <section>
+      <section class="registration-form">
         <form>
           <h4>Register to our mailing list:</h4>
           <div class="input-register">
@@ -109,7 +110,7 @@
       </section>
 
     </main>
-    <footer>
+    <footer class="flex-row">
       <div class="footer-links">
       <ul>
         <li>

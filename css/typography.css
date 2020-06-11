@@ -1,0 +1,12 @@
+body {
+    font-family: var(--font);
+    color: var(--primary-color);
+}
+
+h1,
+h2,
+h3,
+nav {
+    color: var(--secondary-color);
+}
+

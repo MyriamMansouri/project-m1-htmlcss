@@ -1,48 +1,98 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import 'reset.css';
+@import 'settings.css';
+@import 'typography.css';
 
-/* html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+.logo {
+	height: 20px;
 }
-/* HTML5 display-role reset for older browsers */
-/* article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-} */
-/* body {
-	line-height: 1;
-} */
-/* ol, ul {
-	list-style: none;
+
+.header {
+	background-color:var(--primary-color)
 }
-blockquote, q {
-	quotes: none;
+
+.hero {
+	background: url(../imgs/bg.jpg) no-repeat right bottom;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+.hero h1 {
+	height: 100%;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}  */
+.flex-row {
+	display:flex;
+	flex-flow:row wrap;
+	justify-content: space-between;
+}
+.flex-column {
+	display:flex;
+	flex-flow:column wrap;
+}
+
+.section {
+	padding:30px 20px;
+}
+
+.features-detail{
+	margin:0 auto;
+	max-width:350px
+}
+
+.menu-list {
+	display: none;
+}
+
+.gallery-tile{
+	box-sizing: border-box;
+	width:100%;
+	padding :140px 90px;
+	text-align: center	;
+	background-size: cover;
+	  
+}
+
+.gallery-tile1{
+	background: url(../imgs/tesla.jpg) no-repeat center;
+	background-size: cover;
+
+}
+.gallery-tile2{
+	background: url(../imgs/procat.jpg) no-repeat center;
+	background-size: cover;
+
+}
+.gallery-tile3{
+	background: url(../imgs/hyperloop.jpg) no-repeat center;
+	background-size: cover;
+}
+
+.gallery-tile4{
+	background: url(../imgs/sneakycat.jpg) no-repeat center;
+	background-size: cover;
+}
+
+.gallery-tile5{
+	background: url(../imgs/bfr.jpeg) no-repeat center;
+	background-size: cover;
+}
+.gallery-tile6{
+	background: url(../imgs/funnycat.jpg) no-repeat center;
+	background-size: cover;
+}
+
+.gallery-tile h3 {
+	visibility: hidden;
+}
+
+.gallery-tile:hover h3 {
+	visibility: visible;
+}
+@media screen and (min-width:768px) {
+	.menu-list {
+		display: flex;
+	}
+	.menu-img {
+		display:none
+	}
+	.gallery-tile{
+		width:calc(100% / 3);
+	}
+}
