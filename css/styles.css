@@ -78,12 +78,25 @@
 	max-width:350px
 }
 
+.gallery-section {
+	overflow: hidden;
+}
+
+
 .gallery-tile{
 	box-sizing: border-box;
 	width:100%;
 	padding :140px 90px;
 	text-align: center	;
 	white-space: nowrap ;
+	z-index: 1;
+}
+
+.gallery-tile:hover {
+	transform: scale(1.05);
+	filter: brightness(80%);
+	transition: transform   0.2s;
+	z-index: 0;
 }
 
 .gallery-tile1{
