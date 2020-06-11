@@ -37,14 +37,12 @@
 
 .logo,
 .menu-img,
-.menu-list li {
-	padding: 10px 20px;
-	height: 30px;
+.menu-list li a{
+	padding: 5px 20px;
+	height: 40px;
 }
 
-.menu-list li{
-	min-width:80px;
-}
+
 .menu-list,
 .secondary-menu-list {
 	display: none;
@@ -141,15 +139,15 @@
 		text-align: center;
 	}
 	
-	.menu-list li {
+	.menu-list > li {
 		border-bottom: var(--primary-color) solid 2px;
 	}
 	
-	.menu-list li:hover,
-	.secondary-menu-list li:hover {
+	.menu-list > li:hover {
 		background-color: inherit;
 		border-bottom: white solid 2px;
 	}
+
 
 	.secondary-dropdown:hover >  .secondary-menu-list{
 		left:Auto;
