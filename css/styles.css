@@ -42,13 +42,18 @@
 	height: 30px;
 }
 
-.menu-list {
+.menu-list li{
+	min-width:80px;
+}
+.menu-list,
+.secondary-menu-list {
 	display: none;
 	position: relative;
 	background-color:var(--primary-color);
 }
 
-.dropdown:hover >  .menu-list{
+.dropdown:hover >  .menu-list,
+.secondary-dropdown:hover >  .secondary-menu-list{
 	display: block;
 	list-style-type: none;
 	position: absolute;
@@ -57,7 +62,8 @@
 	top: 100%;
 }
 
-.menu-list li:hover {
+.menu-list li:hover,
+.secondary-menu-list li:hover {
 	background-color: burlywood;
 }
 
@@ -132,9 +138,6 @@
 	.dropdown:hover >  .menu-list{
 		display: flex;
 		position: relative;
-		left: 0;
-		right: 0;
-		top: 100%;
 		text-align: center;
 	}
 	
@@ -142,10 +145,13 @@
 		border-bottom: var(--primary-color) solid 2px;
 	}
 	
-	.menu-list li:hover {
+	.menu-list li:hover,
+	.secondary-menu-list li:hover {
 		background-color: inherit;
 		border-bottom: white solid 2px;
 	}
 
-	
+	.secondary-dropdown:hover >  .secondary-menu-list{
+		left:Auto;
+	}
 }
