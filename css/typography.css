@@ -10,3 +10,6 @@ nav {
     color: var(--secondary-color);
 }
 
+nav {
+    font-size: 12px;
+}

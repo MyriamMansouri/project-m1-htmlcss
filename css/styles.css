@@ -2,12 +2,63 @@
 @import 'settings.css';
 @import 'typography.css';
 
-.logo {
-	height: 20px;
+/* General classes for flex containers */
+.flex-row {
+	display:flex;
+	flex-flow:row wrap;
+	justify-content: space-between;
+	align-items: center;
 }
 
+.flex-row-center {
+	display:flex;
+	flex-flow:row wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-column {
+	display:flex;
+	flex-flow:column wrap;
+}
+
+/* General classes for for main sections */
+.section {
+	padding:30px 20px;
+}
+
+/* header + nav */
 .header {
-	background-color:var(--primary-color)
+	background-color:var(--primary-color);
+	position:fixed;
+	top:0;
+	width: 100%;
+}
+
+.logo,
+.menu-img,
+.menu-list li {
+	padding: 10px 20px;
+	height: 30px;
+}
+
+.menu-list {
+	display: none;
+	position: relative;
+	background-color:var(--primary-color);
+}
+
+.dropdown:hover >  .menu-list{
+	display: block;
+	list-style-type: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+}
+
+.menu-list li:hover {
+	background-color: burlywood;
 }
 
 .hero {
@@ -17,27 +68,10 @@
 .hero h1 {
 	height: 100%;
 }
-.flex-row {
-	display:flex;
-	flex-flow:row wrap;
-	justify-content: space-between;
-}
-.flex-column {
-	display:flex;
-	flex-flow:column wrap;
-}
-
-.section {
-	padding:30px 20px;
-}
 
 .features-detail{
 	margin:0 auto;
 	max-width:350px
-}
-
-.menu-list {
-	display: none;
 }
 
 .gallery-tile{
@@ -45,8 +79,7 @@
 	width:100%;
 	padding :140px 90px;
 	text-align: center	;
-	background-size: cover;
-	  
+	white-space: nowrap ;
 }
 
 .gallery-tile1{
@@ -89,10 +122,30 @@
 	.menu-list {
 		display: flex;
 	}
+
 	.menu-img {
 		display:none
 	}
 	.gallery-tile{
 		width:calc(100% / 3);
 	}
+	.dropdown:hover >  .menu-list{
+		display: flex;
+		position: relative;
+		left: 0;
+		right: 0;
+		top: 100%;
+		text-align: center;
+	}
+	
+	.menu-list li {
+		border-bottom: var(--primary-color) solid 2px;
+	}
+	
+	.menu-list li:hover {
+		background-color: inherit;
+		border-bottom: white solid 2px;
+	}
+
+	
 }
