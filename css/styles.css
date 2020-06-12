@@ -24,6 +24,7 @@
 
 /* General classes for for main sections */
 .section {
+	min-height:55vh;
 	padding:30px 20px;
 }
 
@@ -70,7 +71,7 @@
 
 .menu-list li:hover,
 .secondary-menu-list li:hover {
-	background-color: burlywood;
+	background-color: var(--shade-color);
 }
 
 /* hero section*/
@@ -80,19 +81,22 @@ main {
 .hero {
 	background: url(../imgs/bg.jpg) no-repeat top center;
 	background-size: cover;
+	width: 100%;
 }
 .hero--wrapper {
-	max-width: 900px;
+	max-width: 800px;
 }
 
 .hero--main {
 	height: 100%;
 	width: 100%;
+	padding:30px 20px;
 }
 
 .hero--side-wrapper {
 	position: relative;
 	z-index: 1;
+	padding:30px 20px;
 }
 .hero--side::before {
 	content:"";
@@ -112,12 +116,87 @@ main {
 }
 .hero--side p{
 	padding-top: 20px;
-	color: var(--secondary-color) ;
 }
 
+/* feature section*/ 
 .features-detail{
-	margin:0 auto;
-	max-width:300px
+	border-radius: var(--border-radius);
+	box-shadow: 3px 3px 10px 0px var(--shade-color);
+	width: 300px;
+	padding:20px;
+	margin: 40px auto;
+}
+
+.features-detail > *{
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+}
+
+.features-detail p {
+	height:100px;
+	overflow: hidden;
+}
+
+.primary-btn {
+	background-color: var(--primary-color);
+	border: none;
+	padding: 10px 0;
+	width: inherit;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.primary-btn:focus {
+	outline: 2px solid lightskyblue;
+	cursor: pointer;
+
+}
+
+/*Advantages section*/
+.advantages-detail > h2,
+.advantages-detail > p {
+	margin-top: 45px ;
+}
+.advantages-cool {
+	background-color: var(--primary-color);
+	position: relative;
+}
+.advantages-anim {
+	position: absolute;
+	border: var(--secondary-color) 5px solid;
+	background-color: var(--primary-color);
+	width:260px;
+	height: 120px;
+	box-sizing: border-box;
+	padding: 20px;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -130px;
+	margin-top:-60px;
+	text-align: center;
+}
+
+.advantages-anim:hover{
+	animation: adv-anim 6s;
+
+}
+
+@keyframes adv-anim {
+	50% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.advantages-slick {
+	text-align: right;
+	background: rgb(158,154,215);
+	background: linear-gradient(90deg, rgba(158,154,215,1) 0%, rgba(223,223,219,1) 0%, rgba(4,160,240,1) 100%);
 }
 
 .gallery-section {
@@ -202,7 +281,7 @@ main {
 
 	.menu-list > li:hover {
 		background-color: inherit;
-		border-bottom: white solid 2px;
+		border-bottom: var(--secondary-color) solid 2px;
 	}
 	.secondary-dropdown:hover >  .secondary-menu-list{
 		left:Auto;
@@ -210,7 +289,7 @@ main {
 
 	/* hero section*/
 	.hero {
-		min-height: 70vh;;
+		min-height: 50vh;
 	}
 	.hero--wrapper {
 		margin: 120px auto;
@@ -231,5 +310,29 @@ main {
 		width : 45%;
 	}
 
+	/*Advantages section*/
+	.advantages-anim {
+		left: auto;
+		margin-left: 0;
+	}
 
+	@keyframes adv-anim {
+		50% {
+			transform: translate(150px) rotate(180deg);
+		}
+		80% {
+			transform: translate(150px) rotate(180deg) scale(0.7);
+			opacity: 100%
+			
+		}
+		90% {
+			transform: translate(150px) rotate(180deg) scale(0);
+			opacity: 0;
+		}
+		100% {
+			transform: translate(0) rotate(720deg) scale(1);
+			opacity: 100%;
+
+		}
+	}
 }

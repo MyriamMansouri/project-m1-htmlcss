@@ -45,8 +45,12 @@ table {
 
 /*Added to original file*/
 
+html {
+	scroll-behavior: smooth;
+  }
+
 p{
-    line-height: 20px;
+    line-height: 18px;
 }
 
 

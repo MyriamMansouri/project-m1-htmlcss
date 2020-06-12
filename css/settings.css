@@ -1,7 +1,9 @@
 :root {
     --primary-color:#313633;
     --secondary-color:white;
+    --shade-color: #a0a0a0;
     --accent-color:crimson;
     --font: 'Poppins', sans-serif;
     --header-height: 50px;
+    --border-radius:6px;
 }

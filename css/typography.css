@@ -7,18 +7,53 @@ body {
 h1,
 h2,
 h3,
-nav {
+nav,
+.hero--side p,
+.advantages-cool,
+.primary-btn {
     color: var(--secondary-color);
 }
+
 h1 {
-    font-size: 35px;
+    font-size: 50px;
     font-weight: bold;
 }
+
 h2 {
     font-size: 25px;
     font-weight: bold;
 }
+
 h3 {
     font-size: 20px;
 }
 
+
+.features-detail h3 {
+    font-weight: bold;
+    font-size: 15px;
+    color: var(--primary-color);
+}
+
+.advantages-slick h2{
+    color: var(--primary-color);
+}
+
+.advantages-anim p:first-child {
+    color:var(--accent-color);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+@media screen and (min-width:768px) {
+
+    h2 {
+        font-size: 35px;
+    }
+    
+    
+    .advantages-cool > p,
+    .advantages-slick > p {
+        font-size: 20px;
+    }
+}
