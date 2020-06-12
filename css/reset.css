@@ -45,6 +45,11 @@ table {
 
 /*Added to original file*/
 
+p{
+    line-height: 20px;
+}
+
+
 header a,
 footer a {
     text-decoration: none;

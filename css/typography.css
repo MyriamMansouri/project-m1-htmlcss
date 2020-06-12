@@ -1,6 +1,7 @@
 body {
     font-family: var(--font);
     color: var(--primary-color);
+    font-size: 12px;
 }
 
 h1,
@@ -9,11 +10,15 @@ h3,
 nav {
     color: var(--secondary-color);
 }
-
+h1 {
+    font-size: 35px;
+    font-weight: bold;
+}
+h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
 h3 {
     font-size: 20px;
 }
 
-nav {
-    font-size: 12px;
-}

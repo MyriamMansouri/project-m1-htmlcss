@@ -27,19 +27,27 @@
 	padding:30px 20px;
 }
 
+.section > * {
+	box-sizing: border-box;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
 /* header + nav */
 .header {
 	background-color:var(--primary-color);
 	position:fixed;
 	top:0;
 	width: 100%;
+	z-index: 100;
 }
 
 .logo,
 .menu-img,
 .menu-list li a{
+	box-sizing: border-box;
 	padding: 5px 20px;
-	height: 40px;
+	height: var(--header-height);
 }
 
 
@@ -65,28 +73,61 @@
 	background-color: burlywood;
 }
 
+/* hero section*/
+main {
+	margin-top:var(--header-height);
+}
 .hero {
-	background: url(../imgs/bg.jpg) no-repeat right bottom;
+	background: url(../imgs/bg.jpg) no-repeat top center;
+	background-size: cover;
+}
+.hero--wrapper {
+	max-width: 900px;
 }
 
-.hero h1 {
+.hero--main {
 	height: 100%;
+	width: 100%;
+}
+
+.hero--side-wrapper {
+	position: relative;
+	z-index: 1;
+}
+.hero--side::before {
+	content:"";
+	position: absolute;
+	top: 0; 
+	left: 0;
+	width: 100%; 
+	height: 100%;  
+	background-color: black;
+	opacity:30%;
+	z-index: -1;
+}
+
+.hero--side h2{
+	padding-bottom: 20px;
+	width:100%;
+}
+.hero--side p{
+	padding-top: 20px;
+	color: var(--secondary-color) ;
 }
 
 .features-detail{
 	margin:0 auto;
-	max-width:350px
+	max-width:300px
 }
 
 .gallery-section {
 	overflow: hidden;
 }
 
-
 .gallery-tile{
 	box-sizing: border-box;
 	width:100%;
-	padding :140px 90px;
+	padding :140px 0;
 	text-align: center	;
 	white-space: nowrap ;
 	z-index: 1;
@@ -135,7 +176,10 @@
 .gallery-tile:hover h3 {
 	visibility: visible;
 }
+
+
 @media screen and (min-width:768px) {
+	/* header + nav */
 	.menu-list {
 		display: flex;
 	}
@@ -155,14 +199,37 @@
 	.menu-list > li {
 		border-bottom: var(--primary-color) solid 2px;
 	}
-	
+
 	.menu-list > li:hover {
 		background-color: inherit;
 		border-bottom: white solid 2px;
 	}
-
-
 	.secondary-dropdown:hover >  .secondary-menu-list{
 		left:Auto;
 	}
+
+	/* hero section*/
+	.hero {
+		min-height: 70vh;;
+	}
+	.hero--wrapper {
+		margin: 120px auto;
+		border: var(--secondary-color) 3px solid;
+	}
+
+	.hero--main {
+		flex:1
+	}
+
+	.hero--side-wrapper {
+		flex:2;
+	}
+	.hero--side h2{
+		border-bottom: var(--secondary-color) 1px dotted;
+	}
+	.hero--side p {
+		width : 45%;
+	}
+
+
 }
