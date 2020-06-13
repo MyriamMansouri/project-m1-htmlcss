@@ -9,7 +9,7 @@ h2,
 h3,
 nav,
 .hero--side p,
-.advantages-cool,
+.advantages-detail,
 .primary-btn {
     color: var(--secondary-color);
 }
@@ -28,14 +28,9 @@ h3 {
     font-size: 20px;
 }
 
-
 .features-detail h3 {
     font-weight: bold;
     font-size: 15px;
-    color: var(--primary-color);
-}
-
-.advantages-slick h2{
     color: var(--primary-color);
 }
 
@@ -50,8 +45,7 @@ h3 {
     h2 {
         font-size: 35px;
     }
-    
-    
+        
     .advantages-cool > p,
     .advantages-slick > p {
         font-size: 20px;

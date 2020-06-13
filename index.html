@@ -73,21 +73,21 @@
               <img src="imgs/icon1.svg">
               <h3>Amazing Feature 1</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-              <button class="primary-btn">Get it</button>
+              <button class="btn primary-btn">Get it</button>
           </div>
 
           <div class="features-detail ">
               <img src="imgs/icon2.svg">
               <h3>Amazing Feature 2</h3>
               <p>do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-              <button class="primary-btn">Do it</button>
+              <button class="btn primary-btn">Do it</button>
             </div>
 
           <div class="features-detail">
             <img src="imgs/icon3.svg">
             <h3>Amazing Feature 3</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-            <button class="primary-btn">Sell it</button>
+            <button class="btn primary-btn">Sell it</button>
           </div>
       
       </section>
@@ -126,25 +126,26 @@
           <h3>So much fun</h3>
         </div>
       </section>
-      <section class="registration-form">
+      <section class="registration-form flex-row-center">
         <form>
           <h4>Register to our mailing list:</h4>
-          <div class="input-register">
-              <label for="email">Email</label>
+          <div class="email-input-wrapper flex-row-nowrap">
+              <label for="email" class="email-label">Email</label>
               <input type="email" id="email" name="email" required>
-              <button>
+              <button class="btn registration-btn">
                 <img src="imgs/send.svg" alt="Register">
               </button>
           </div>
-          <label>
-            <input type="checkbox" value="cat-imgs"/>
+          <label class="flex-row-start cat-label">
+            <input type="checkbox" value="cat-imgs" checked/>
+            <span class="checkmark"></span>
             Send me daily cat images
           </label>
         </form>
       </section>
 
     </main>
-    <footer class="footer flex-row section">
+    <footer class="footer section">
       <div class="footer-links">
       <ul>
         <li>

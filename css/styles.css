@@ -10,10 +10,23 @@
 	align-items: center;
 }
 
+.flex-row-nowrap {
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
 .flex-row-center {
 	display:flex;
 	flex-flow:row wrap;
 	justify-content: center;
+	align-items: center;
+}
+.flex-row-start{
+	display:flex;
+	flex-flow:row wrap;
+	justify-content: start;
 	align-items: center;
 }
 
@@ -22,16 +35,27 @@
 	flex-flow:column wrap;
 }
 
-/* General classes for for main sections */
+/* General classes for main sections */
 .section {
-	min-height:55vh;
 	padding:30px 20px;
 }
 
 .section > * {
 	box-sizing: border-box;
-	max-width: 1200px;
+	max-width: 1280px;
 	margin: 0 auto;
+}
+
+/*Button general styling*/
+.btn {
+	background-color: var(--primary-color);
+	border: none;
+	padding: 8px 0;
+}
+
+.btn:focus {
+	outline: 2px solid lightskyblue;
+	cursor: pointer;
 }
 
 /* header + nav */
@@ -139,22 +163,15 @@ main {
 }
 
 .primary-btn {
-	background-color: var(--primary-color);
-	border: none;
-	padding: 10px 0;
-	width: inherit;
 	display: block;
 	width: 100%;
 	box-sizing: border-box;
 }
 
-.primary-btn:focus {
-	outline: 2px solid lightskyblue;
-	cursor: pointer;
-
-}
-
 /*Advantages section*/
+.advantages-detail{
+	height: 50vh ;
+}
 .advantages-detail > h2,
 .advantages-detail > p {
 	margin-top: 45px ;
@@ -181,7 +198,6 @@ main {
 
 .advantages-anim:hover{
 	animation: adv-anim 6s;
-
 }
 
 @keyframes adv-anim {
@@ -201,6 +217,8 @@ main {
 
 .gallery-section {
 	overflow: hidden;
+	max-width: 1280px;
+	margin:0 auto
 }
 
 .gallery-tile{
@@ -256,7 +274,115 @@ main {
 	visibility: visible;
 }
 
+/*Registration section*/
+.registration-form {
+	padding:30px 20px;
+}
+.registration-form .email-label {
+	display: none;
+	
+}
+.email-input-wrapper {
+	border:1px solid var(--shade-color);
+	border-radius: var(--border-radius);
+	margin:15px 0;	
+	position: relative;
+}
+.email-input-wrapper input {
+	margin-left:2px;
+	box-sizing: border-box;
+	outline: none;
+	border:none;
+	width: 50vw;
+	max-width: 250px;
+	height: 20px;
+}
+.registration-btn {
+	background-color:var(--shade-color);
+	padding: 5px 0;
+	width: 40px;
+}
 
+.registration-btn img {
+	height:15px;
+}
+
+.email-input-wrapper:focus-within  > .registration-btn{
+	background-color:var(--primary-color);
+}
+
+.email-input-wrapper:focus-within{
+	border:1px solid var(--primary-color);
+}
+
+/* Custom checkbox */
+/* Adapted from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_checkbox */
+
+/* The container */
+.cat-label {
+	height: 15px;
+	position: relative;
+	padding-left: 15px;
+	cursor: pointer;
+}
+/* Hide the browser's default checkbox */
+.cat-label input{
+	-webkit-appearance: none;
+}
+/* Create a custom checkbox */
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 15px;
+	width: 15px;
+	border: solid 1px var(--primary-color);
+	border-radius: var(--border-radius);
+  }
+  /* When the checkbox is checked, add background color*/
+  .cat-label input:checked ~ .checkmark {
+	background-color: var(--primary-color);
+  }
+/* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+  }
+/* Show the checkmark when checked */
+  .cat-label input:checked ~ .checkmark:after {
+	display: block;
+  }
+  /* Style the checkmark/indicator */
+  .cat-label .checkmark:after {
+	left: 3px;
+	top: 0;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	transform: rotate(45deg);
+  }
+
+  /* Footer*/
+  .footer{
+	border-top: 1px solid lightgray;
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+  }
+  .footer-links {
+	  padding: 20px 10px;
+	  box-sizing: border-box;
+	 
+	  max-width: 200px;
+	  margin: 0 auto;
+	  }
+
+  .footer-links li{
+	  padding: 8px 0;
+  }
+  
 @media screen and (min-width:768px) {
 	/* header + nav */
 	.menu-list {
@@ -334,5 +460,14 @@ main {
 			opacity: 100%;
 
 		}
+	}
+
+	/* Footer */
+	.footer {
+		grid-template-columns: 1fr 1fr 1fr 1fr ;
+	}
+	.footer-links {
+		padding: 20px 30px;
+		flex: 0 1 auto;
 	}
 }
